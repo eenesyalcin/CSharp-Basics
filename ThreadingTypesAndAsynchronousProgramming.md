@@ -1,48 +1,48 @@
-# Tekli İş Parçacığı — Çoklu İş Parçacığı ve Asenkron Programlama (Single — Multi Threading and Asynchronous Programming)
+# Tekli Ä°ÅŸ ParÃ§acÄ±ÄŸÄ± â€” Ã‡oklu Ä°ÅŸ ParÃ§acÄ±ÄŸÄ± ve Asenkron Programlama (Single â€” Multi Threading and Asynchronous Programming)
 
 
 </br></br>
 
 
-## Tekli İş Parçacığı (Single Threading)
-___“Tekli İş Parçacığı (Single Threading)”___ özetle; bir işlem bir threadi kullanırken, başka bir işlemin aynı threadi kullanamamasıdır. 
-Diğer işlemin aynı threadi kullanabilmesi için, mevcut durumda threadi kullanan işlemin bitmesi gerekir. İşte bu duruma da ___“Tekli İş Parçacığı (Single Threading)”___ denir.
+## Tekli Ä°ÅŸ ParÃ§acÄ±ÄŸÄ± (Single Threading)
+___â€œTekli Ä°ÅŸ ParÃ§acÄ±ÄŸÄ± (Single Threading)â€___ Ã¶zetle; bir iÅŸlem bir threadi kullanÄ±rken, baÅŸka bir iÅŸlemin aynÄ± threadi kullanamamasÄ±dÄ±r. 
+DiÄŸer iÅŸlemin aynÄ± threadi kullanabilmesi iÃ§in, mevcut durumda threadi kullanan iÅŸlemin bitmesi gerekir. Ä°ÅŸte bu duruma da ___â€œTekli Ä°ÅŸ ParÃ§acÄ±ÄŸÄ± (Single Threading)â€___ denir.
 
-![SingleThreading](https://github.com/eenesyalcin/fdfd/assets/107759141/20eea127-246a-4d55-9df5-2b257d9202fa)
+![SingleThreading](https://github.com/eenesyalcin/CSharp-Basics/assets/107759141/e4c5683b-0d44-4dd2-bb93-f9a6c825b5a5)
 
-Yukarıdaki şemada İŞLEM-1 threadi kullanmaktadır. İŞLEM-2'nin threadi kullanabilmesi için İŞLEM-1'in bitmesini beklemektedir. İŞLEM-1 bittikten sonra İŞLEM-2 threadi kullanabilecektir.
+YukarÄ±daki ÅŸemada Ä°ÅLEM-1 threadi kullanmaktadÄ±r. Ä°ÅLEM-2'nin threadi kullanabilmesi iÃ§in Ä°ÅLEM-1'in bitmesini beklemektedir. Ä°ÅLEM-1 bittikten sonra Ä°ÅLEM-2 threadi kullanabilecektir.
 
 
 </br></br>
 
 
-## Çoklu İş Parçacığı (Multi Threading)
-___“Muti Threading”___ özetle; bir işlem gerçekleştirilirken diğer bir işlemin sırada beklemesi yerine eş zamanlı olarak görev yapabilmesi için, başka bir threadi kullanmasına denir.
-___“Çoklu İş Parçacığı (Multi Threading)”___ kullanımı söz konusuyken genellikle verimli bir program elde edilebilmesi için thread sayısı 8'i geçmez. 
-Eğer thread sayısından fazla işlem sayısı varsa 8 taneden sonraki işlemler için tekrar ___“Tekli İş Parçacığı (Single Threading)”___ durumu söz konusu olur. 
-Yani herhangi bir thread boşa çıkana kadar işlem bekler ve bir thread boşa çıktığında gerçekleştirilmesi gereken işlem o threade yapışır. 
-Ayrıca toplam 8 taneden oluşan thread kümesine thread havuzu anlamına gelen ___“İş Parçacığı Havuzu (Thread Pool)”___ denir.
+## Ã‡oklu Ä°ÅŸ ParÃ§acÄ±ÄŸÄ± (Multi Threading)
+___â€œMuti Threadingâ€___ Ã¶zetle; bir iÅŸlem gerÃ§ekleÅŸtirilirken diÄŸer bir iÅŸlemin sÄ±rada beklemesi yerine eÅŸ zamanlÄ± olarak gÃ¶rev yapabilmesi iÃ§in, baÅŸka bir threadi kullanmasÄ±na denir.
+___â€œÃ‡oklu Ä°ÅŸ ParÃ§acÄ±ÄŸÄ± (Multi Threading)â€___ kullanÄ±mÄ± sÃ¶z konusuyken genellikle verimli bir program elde edilebilmesi iÃ§in thread sayÄ±sÄ± 8'i geÃ§mez. 
+EÄŸer thread sayÄ±sÄ±ndan fazla iÅŸlem sayÄ±sÄ± varsa 8 taneden sonraki iÅŸlemler iÃ§in tekrar ___â€œTekli Ä°ÅŸ ParÃ§acÄ±ÄŸÄ± (Single Threading)â€___ durumu sÃ¶z konusu olur. 
+Yani herhangi bir thread boÅŸa Ã§Ä±kana kadar iÅŸlem bekler ve bir thread boÅŸa Ã§Ä±ktÄ±ÄŸÄ±nda gerÃ§ekleÅŸtirilmesi gereken iÅŸlem o threade yapÄ±ÅŸÄ±r. 
+AyrÄ±ca toplam 8 taneden oluÅŸan thread kÃ¼mesine thread havuzu anlamÄ±na gelen ___â€œÄ°ÅŸ ParÃ§acÄ±ÄŸÄ± Havuzu (Thread Pool)â€___ denir.
 
-![MultiThreading](https://github.com/eenesyalcin/fdfd/assets/107759141/1a873bcd-bd1d-481c-9a44-15e1852663e7)
+![MultiThreading](https://github.com/eenesyalcin/CSharp-Basics/assets/107759141/93e2388f-4181-4285-bf1d-de0e89c5718b)
 
-Yukarıdaki şemada 9 tane işlem ve 8 tane thread vardır. Her thread bir işlem tarafından kullanılmaktadır. Boşta olan İŞLEM-9, THREAD-7'nin işini ilk bitirdiğini varsayarsak hemen ona yapışır ve 
-onu kullanmaya başlar. Yani 8 tane ile sınırlandırılmış olan ___“Çoklu İş Parçacığı (Multi Threading)”___ söz konusu ise, 8. işlemden sonra bu durum ___“Single Threading (Tekli İş Parçacığı)”___ durumuna döner.
+YukarÄ±daki ÅŸemada 9 tane iÅŸlem ve 8 tane thread vardÄ±r. Her thread bir iÅŸlem tarafÄ±ndan kullanÄ±lmaktadÄ±r. BoÅŸta olan Ä°ÅLEM-9, THREAD-7'nin iÅŸini ilk bitirdiÄŸini varsayarsak hemen ona yapÄ±ÅŸÄ±r ve 
+onu kullanmaya baÅŸlar. Yani 8 tane ile sÄ±nÄ±rlandÄ±rÄ±lmÄ±ÅŸ olan ___â€œÃ‡oklu Ä°ÅŸ ParÃ§acÄ±ÄŸÄ± (Multi Threading)â€___ sÃ¶z konusu ise, 8. iÅŸlemden sonra bu durum ___â€œSingle Threading (Tekli Ä°ÅŸ ParÃ§acÄ±ÄŸÄ±)â€___ durumuna dÃ¶ner.
 
 
 </br></br>
 
 
 ## Asenkron Programlama (Asynchronous Programming)
-___“Asynchronous Programming (Asenkron Programlama)”___ özetle; iki işlemin eş zamanlı olarak aynı threadi kullanabilmesine denir.
+___â€œAsynchronous Programming (Asenkron Programlama)â€___ Ã¶zetle; iki iÅŸlemin eÅŸ zamanlÄ± olarak aynÄ± threadi kullanabilmesine denir.
 
-![AsynchronousProgramming](https://github.com/eenesyalcin/fdfd/assets/107759141/540cc976-9c6a-4333-aba1-8b8e71679501)
+![AsynchronousProgramming](https://github.com/eenesyalcin/CSharp-Basics/assets/107759141/052038aa-a01f-4d3d-8d4a-54d82cda1550)
 
-Yukarıdaki şemada İŞLEM-1 threadi kullanmaya başlamıştır. Eş zamanlı olarak İŞLEM-2 de aynı threadi kullanmaktadır. 
-Ayrıca ___“Asynchronous Programming (Asenkron Programlama)”___ da iki işlem aynı threadi; aynı zamanda ve aynı şekilde(konumda) kullanabilirler.
+YukarÄ±daki ÅŸemada Ä°ÅLEM-1 threadi kullanmaya baÅŸlamÄ±ÅŸtÄ±r. EÅŸ zamanlÄ± olarak Ä°ÅLEM-2 de aynÄ± threadi kullanmaktadÄ±r. 
+AyrÄ±ca ___â€œAsynchronous Programming (Asenkron Programlama)â€___ da iki iÅŸlem aynÄ± threadi; aynÄ± zamanda ve aynÄ± ÅŸekilde(konumda) kullanabilirler.
 
 
 </br><hr>
 
 
-Eğer yazımı Medium hesabımdan okumak ve destek vermek isterseniz aşağıdaki linki ziyaret edebilirsiniz. </br>
+EÄŸer yazÄ±mÄ± Medium hesabÄ±mdan okumak ve destek vermek isterseniz aÅŸaÄŸÄ±daki linki ziyaret edebilirsiniz. </br>
 ***https://medium.com/@eenes.ylcn/single-thrading-multi-threading-ve-asenkron-programlama-306d0d6dbbc1*** <hr>
